@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const request = require('request');
-const apiaiApp = require('apiai')("dad89d99e8d0404f9a8563674f3e2348");
+const apiaiApp = require('apiai')("********"); // DIALOGUEFLOW_TOKEN
 
 const PORT=process.env.PORT || 5000;
 
@@ -46,7 +46,7 @@ function sendMessage(event) {
 
         request({
             url: 'https://graph.facebook.com/v3.0/me/messages',
-            qs: { access_token: "EAADgBPAbnfIBAJ6N2BwlCOUVZAta0rC5bgdPyFqUkhXyBB1koboQdYM8j5DRp1ZASKWqk4ZAtZCBgZCqupxtAzpnQ523W3bcPAdygllAKqvTHvxDpdqSPWRLraZAGHwxy0HxprIepTA1fIrZAa88ESTXM8f3ygqNCZAtzeEHb25JQycn1lbmuAKu" },
+            qs: { access_token: "***************" }, // PAGE_ACCESS_TOKEN
             method: 'POST',
             json: {
                 recipient: { id: sender },
